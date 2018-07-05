@@ -18,6 +18,7 @@
 
   <properties>
     <stack.version>3.4.1</stack.version>
+    <vertx-maven-plugin.version>1.0.15</vertx-maven-plugin.version>
 
     <!--overridden in each project packaged as a fat jar -->
     <main.verticle/>
