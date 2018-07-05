@@ -14,8 +14,8 @@
   <artifactId>quote-generator</artifactId>
 
   <properties>
-    <!-- Main verticle -->
-    <main.verticle>io.vertx.workshop.quote.GeneratorConfigVerticle</main.verticle>
+    <vertx.verticle>io.vertx.workshop.quote.GeneratorConfigVerticle</vertx.verticle>
+    <vertx.launcher>io.vertx.workshop.common.Launcher</vertx.laun
   </properties>
 
   <dependencies>
@@ -29,10 +29,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <!-- plugin to create a `fat-jar` -->
-        <artifactId>maven-shade-plugin</artifactId>
-      </plugin>
       <plugin>
         <!-- copy the cluster configuration -->
         <artifactId>maven-dependency-plugin</artifactId>
