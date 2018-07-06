@@ -24,9 +24,9 @@ public class RestQuoteAPIVerticle extends AbstractVerticle {
           // TODO Populate the `quotes` map with the received quote
           // Quotes are json objects you can retrieve from the message body
           // The map is structured as follows: name -> quote
-          // ----
-
-          // ----
+          
+          //TODO: insert quotes
+          
         });
 
 
@@ -34,20 +34,16 @@ public class RestQuoteAPIVerticle extends AbstractVerticle {
         .requestHandler(request -> {
           HttpServerResponse response = request.response()
               .putHeader("content-type", "application/json");
-
-          // TODO
+          
           // The request handler returns a specific quote if the `name` parameter is set, or the whole map if none.
           // To write the response use: `request.response().end(content)`
           // Responses are returned as JSON, so don't forget the "content-type": "application/json" header.
           // If the symbol is set but not found, you should return 404.
           // Once the request handler is set,
-
-          response
-              .end(Json.encodePrettily(quotes));
-
-          // ----
-
-          // ----
+          
+          
+         //TODO: return quotes
+          
         })
         .listen(config().getInteger("http.port"), ar -> {
           if (ar.succeeded()) {
