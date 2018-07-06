@@ -19,7 +19,11 @@
   <properties>
     <stack.version>3.4.1</stack.version>
     <vertx-maven-plugin.version>1.0.15</vertx-maven-plugin.version>
-
+    <fabric8-maven-plugin.version>3.5.38</fabric8-maven-plugin.version>
+    <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift
+    </fabric8.generator.from>
+    <fabric8.openshift.trimImageInContainerSpec>true</fabric8.openshift.trimImageInContainerSpec>
+   
     <!--overridden in each project packaged as a fat jar -->
     <main.verticle/>
   </properties>
@@ -230,5 +234,39 @@
       </plugins>
     </pluginManagement>
   </build>
+         
+  <profiles>
+        <profile>
+            <id>openshift</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>fabric8-maven-plugin</artifactId>
+                        <version>${fabric8-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>resource</goal>
+                                    <goal>build</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <generator>
+                                <includes>
+                                    <include>wildfly-swarm</include>
+                                </includes>
+                                <excludes>
+                                    <exclude>webapp</exclude>
+                                </excludes>
+                            </generator>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
 
 </project>
