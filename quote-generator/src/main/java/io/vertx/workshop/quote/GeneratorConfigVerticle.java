@@ -27,21 +27,15 @@ public class GeneratorConfigVerticle extends MicroServiceVerticle {
       JsonObject company = (JsonObject) q;
 
       // Deploy the verticle with a configuration.
-      //TODO: market data
+      //TODO: market data verticle
     }
 
     vertx.deployVerticle(RestQuoteAPIVerticle.class.getName());
 
     // Publish the services in the discovery infrastructure
-    //TODO: service discovery
+    //TODO: do service discovery
 
     // Publish a simple http endpoint
-    publishHttpEndpoint("quotes", "localhost", config().getInteger("http.port", 8080), ar -> {
-      if (ar.failed()) {
-        ar.cause().printStackTrace();
-      } else {
-        System.out.println("Quotes (Rest endpoint) service published : " + ar.succeeded());
-      }
-    });
+    //TODO: http endpoint verticle
   }
 }
