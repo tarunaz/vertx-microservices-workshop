@@ -3,7 +3,7 @@ metadata:
 data:
   config.json: |
     {
-      "http.port": 35000,
+      "http.port": 8080,
       "companies": [
         {
           "name": "MacroHard",

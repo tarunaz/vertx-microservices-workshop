@@ -1,0 +1,15 @@
+metadata:
+  annotations:
+    configmap.fabric8.io/update-on-change: ${project.artifactId}
+spec:
+  replicas: 1
+  template:
+    spec:
+      volumes:
+        - name: config
+          configMap:
+            name: ${project.artifactId}
+      containers:
+        - volumeMounts:
+            - name: config
+              mountPath: /deployments/src/conf
