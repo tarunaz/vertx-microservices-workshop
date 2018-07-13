@@ -30,7 +30,9 @@ public class GeneratorConfigVerticle extends MicroServiceVerticle {
       //TODO: market data verticle
     }
 
-    vertx.deployVerticle(RestQuoteAPIVerticle.class.getName());
+    // Deploy the verticle with a configuration.
+    vertx.deployVerticle(RestQuoteAPIVerticle.class.getName(), new DeploymentOptions().setConfig(config()));
+
 
     // Publish the services in the discovery infrastructure
     //TODO: do service discovery
