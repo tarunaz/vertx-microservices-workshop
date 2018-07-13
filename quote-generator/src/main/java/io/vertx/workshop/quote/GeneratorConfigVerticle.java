@@ -22,32 +22,20 @@ public class GeneratorConfigVerticle extends MicroServiceVerticle {
   public void start() {
     super.start();
 
-    // Read the configuration, and deploy a MarketDataVerticle for each company listed in the configuration.
     JsonArray quotes = config().getJsonArray("companies");
     for (Object q : quotes) {
       JsonObject company = (JsonObject) q;
-    // Deploy another verticle without configuration.  
-      vertx.deployVerticle(MarketDataVerticle.class.getName(), new DeploymentOptions().setConfig(company));
+
+      // Deploy the verticle with a configuration.
+      //TODO: market data
     }
 
-    
-    // Deploy the verticle with a configuration.
-    vertx.deployVerticle(RestQuoteAPIVerticle.class.getName(), new DeploymentOptions().setConfig(config()));
+    vertx.deployVerticle(RestQuoteAPIVerticle.class.getName());
 
-    // Publish the services in the discovery infrastructure.
-    publishMessageSource("market-data", ADDRESS, rec -> {
-      if (!rec.succeeded()) {
-        rec.cause().printStackTrace();
-      }
-      System.out.println("Market-Data service published : " + rec.succeeded());
-    });
+    // Publish the services in the discovery infrastructure
+    //TODO: service discovery
 
-    publishHttpEndpoint("quotes", "localhost", config().getInteger("http.port", 8080), ar -> {
-      if (ar.failed()) {
-        ar.cause().printStackTrace();
-      } else {
-        System.out.println("Quotes (Rest endpoint) service published : " + ar.succeeded());
-      }
-    });
+    // Publish a simple http endpoint
+    //TODO: http endpoint
   }
 }
