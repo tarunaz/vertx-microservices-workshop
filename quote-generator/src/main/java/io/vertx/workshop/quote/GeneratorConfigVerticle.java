@@ -27,7 +27,7 @@ public class GeneratorConfigVerticle extends MicroServiceVerticle {
       JsonObject company = (JsonObject) q;
 
       // Deploy the verticle with a configuration.
-      //TODO: market data verticle
+      //TODO: deploy market data verticle
     }
 
     // Deploy the verticle with a configuration.
@@ -35,9 +35,9 @@ public class GeneratorConfigVerticle extends MicroServiceVerticle {
 
 
     // Publish the services in the discovery infrastructure
-    //TODO: do service discovery
+    //TODO: publish market data service on event bus
 
     // Publish a simple http endpoint
-    //TODO: http endpoint verticle
+    //TODO: publish http endpoint
   }
 }
