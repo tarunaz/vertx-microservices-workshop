@@ -14,7 +14,7 @@
 
   <properties>
     <vertx.verticle>io.vertx.workshop.dashboard.DashboardVerticle</vertx.verticle>
-    <vertx.launcher>io.vertx.workshop.common.Launcher</vertx.launcher>
+    <vertx.launcher>io.vertx.core.Launcher</vertx.launcher>
   </properties>
 
   <dependencies>
