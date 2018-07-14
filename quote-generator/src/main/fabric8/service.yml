@@ -9,6 +9,6 @@ spec:
       port: 8080
       targetPort: 35000
   selector:
-    name: ${project.artifactId}
+    app: ${project.artifactId}
   type: ClusterIP
   sessionAffinity: None
