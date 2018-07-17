@@ -30,25 +30,19 @@ public class PortfolioServiceImpl implements PortfolioService {
 
   @Override
   public void getPortfolio(Handler<AsyncResult<Portfolio>> resultHandler) {
-    // TODO
-    // ----
+    // TODO: getPortfolio
 
-    // ----
   }
 
   private void sendActionOnTheEventBus(String action, int amount, JsonObject quote, int newAmount) {
-    // TODO
-    // ----
+    // TODO: sendActionOnTheEventBus
 
-    // ----
   }
 
   @Override
   public void evaluate(Handler<AsyncResult<Double>> resultHandler) {
-    // TODO
-    // ----
-
-    // ---
+    // TODO: evaluate
+    
   }
 
   private void computeEvaluation(WebClient webClient, Handler<AsyncResult<Double>> resultHandler) {
@@ -70,10 +64,8 @@ public class PortfolioServiceImpl implements PortfolioService {
     // Create the future object that will  get the value once the value have been retrieved
     Future<Double> future = Future.future();
 
-    //TODO
-    //----
+    //TODO: getValueForCompany
 
-    // ---
 
     return future;
   }
