@@ -23,9 +23,10 @@
     <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift
     </fabric8.generator.from>
     <fabric8.openshift.trimImageInContainerSpec>true</fabric8.openshift.trimImageInContainerSpec>
-   
+
     <!--overridden in each project packaged as a fat jar -->
-    <main.verticle/>
+    <vertx.verticle/>
+    <vertx.launcher>io.vertx.workshop.common.Launcher</vertx.launcher>
   </properties>
 
   <modules>
@@ -161,7 +162,6 @@
           <redeploy>false</redeploy>
         </configuration>
       </plugin>
-
     </plugins>
 
     <pluginManagement>

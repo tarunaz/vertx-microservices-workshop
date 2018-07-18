@@ -15,7 +15,6 @@
 
   <properties>
     <vertx.verticle>io.vertx.workshop.quote.GeneratorConfigVerticle</vertx.verticle>
-    <vertx.launcher>io.vertx.workshop.common.Launcher</vertx.launcher>
   </properties>
 
   <dependencies>
