@@ -14,9 +14,15 @@
   <artifactId>quote-generator</artifactId>
   <name>Quote Generator (Solution)</name>
 
+  <!--
   <properties>
-    <!-- Main verticle -->
-    <main.verticle>io.vertx.workshop.quote.GeneratorConfigVerticle</main.verticle>
+      <main.verticle>io.vertx.workshop.quote.GeneratorConfigVerticle</main.verticle>
+  </properties>
+  -->
+
+  <properties>
+    <vertx.verticle>io.vertx.workshop.quote.GeneratorConfigVerticle</vertx.verticle>
+    <vertx.launcher>io.vertx.workshop.common.Launcher</vertx.launcher>
   </properties>
 
   <dependencies>

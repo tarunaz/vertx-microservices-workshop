@@ -30,18 +30,18 @@ public class PortfolioServiceImpl implements PortfolioService {
 
   @Override
   public void getPortfolio(Handler<AsyncResult<Portfolio>> resultHandler) {
-    // TODO: getPortfolio
+    //TODO: getPortfolio
 
   }
 
   private void sendActionOnTheEventBus(String action, int amount, JsonObject quote, int newAmount) {
-    // TODO: sendActionOnTheEventBus
+    //TODO: sendActionOnTheEventBus
 
   }
 
   @Override
   public void evaluate(Handler<AsyncResult<Double>> resultHandler) {
-    // TODO: evaluate
+    //TODO: evaluate
     
   }
 

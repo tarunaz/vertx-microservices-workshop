@@ -25,7 +25,7 @@ public class PortfolioVerticle extends MicroServiceVerticle {
     // Publish it in the discovery infrastructure
     //TODO: publish portfolio service
 
-    // TODO: implement portfolio service
+    //TODO: implement portfolio service
 
     //TODO: publish portfolio-events service
 

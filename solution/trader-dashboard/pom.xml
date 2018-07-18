@@ -13,8 +13,15 @@
   <artifactId>trader-dashboard</artifactId>
   <name>Trader Dashboard (Solution)</name>
 
+  <!--
   <properties>
     <main.verticle>io.vertx.workshop.dashboard.DashboardVerticle</main.verticle>
+  </properties>
+  -->
+
+  <properties>
+    <vertx.verticle>io.vertx.workshop.dashboard.DashboardVerticle</vertx.verticle>
+    <vertx.launcher>io.vertx.core.Launcher</vertx.launcher>
   </properties>
 
   <dependencies>

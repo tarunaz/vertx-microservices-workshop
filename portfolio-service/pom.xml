@@ -12,8 +12,15 @@
 
   <artifactId>portfolio-service</artifactId>
 
+  <!--
   <properties>
     <main.verticle>io.vertx.workshop.portfolio.impl.PortfolioVerticle</main.verticle>
+  </properties>
+  -->
+
+  <properties>
+    <vertx.verticle>io.vertx.workshop.portfolio.impl.PortfolioVerticle</vertx.verticle>
+    <vertx.launcher>io.vertx.core.Launcher</vertx.launcher>
   </properties>
 
   <dependencies>
